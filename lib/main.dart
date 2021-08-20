@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app2/views/home.dart';
+import 'route/route.dart' as route;
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.white),
         ),
       ),
-      home: HomePage(),
+      onGenerateRoute: route.controller,
+      initialRoute: route.loginPage,
+      // home: HomePage(),
     );
   }
 }
